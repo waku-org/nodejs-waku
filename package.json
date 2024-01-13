@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
     "compile": "tsc src/SetupPackage.ts --outDir dist/",
-    "prepare-package": "mkdir dist && npm run clean && npm run compile && node dist/SetupPackage.js && cp src/distributed_readme.md dist/",
+    "prepare-package": "mkdir dist && npm run clean && npm run compile && node dist/SetupPackage.js && cp src/distributed_readme.md dist/README.md",
     "build-libwaku": "cd src/vendor/nwaku && yes Y | make libwaku && cp build/libwaku.so ../../../dist/",
     "build-gyp": "node-gyp configure --directory=src/ && node-gyp build --directory=src/ && cp -r src/build/ dist/",
     "build-package": "cd dist && npm pack",
