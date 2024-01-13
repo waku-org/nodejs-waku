@@ -9,11 +9,8 @@ exports.wakuVersion = function() {
     wakuMod.wakuVersion(function(msg){ console.log("Waku Version: " + msg) })
 }
 
-exports.wakuDefaultPubsubTopic = function() {
-    // Example on how to retrieve a value from the waku library
-    var defaultPubsubTopic = ""
-    wakuMod.wakuDefaultPubsubTopic(function(msg){ defaultPubsubTopic = msg })
-    console.log("Default pubsub topic: " + defaultPubsubTopic)
+exports.wakuDefaultPubsubTopic = function(defaultPubsubTopicHandler) {
+    wakuMod.wakuDefaultPubsubTopic(defaultPubsubTopicHandler)
 }
 
 exports.wakuSetEventCallback = function(eventHandler) {

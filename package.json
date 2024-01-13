@@ -1,6 +1,6 @@
 {
   "name": "nodejs-waku",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "NodeJs wrapper of a Waku node",
   "main": "waku.js",
   "scripts": {
