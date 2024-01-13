@@ -1,15 +1,17 @@
 
 ## Intro
 
-This is a NodeJs wrapper around Waku
+NodeJs wrapper around Waku
+
+The Waku node binary is generated in a shape of a shared library, libwaku.so. This library is currently created from
+the `nwaku` repository, a.k.a. "Nim Waku" (vendor dependency.)
+
+On the other hand, the `libwaku.so` library is wrapped to NodeJs
+by means of the `node-gyp` utility.
 
 ## Requirements
 
 node-gyp is required to be installed in the system.
-
-The following commands should be run to install npm dependencies:
-
-cd src && npm install bindings
 
 ## Create a package
 
