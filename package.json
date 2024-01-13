@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-waku",
+  "version": "0.1.11",
+  "description": "NodeJs wrapper of a Waku node",
+  "main": "waku.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "compile": "tsc src/SetupPackage.ts --outDir dist/",
+    "prepare-package": "mkdir dist && npm run clean && npm run compile && node dist/SetupPackage.js && cp src/distributed_readme.md dist/",
+    "build-libwaku": "cd src/vendor/nwaku && yes Y | make libwaku && cp build/libwaku.so ../../../dist/",
+    "build-gyp": "node-gyp configure --directory=src/ && node-gyp build --directory=src/ && cp -r src/build/ dist/",
+    "build-package": "cd dist && npm pack",
+    "publish-package": "cd dist && npm publish --access public"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.4",
+    "bindings": "^1.5.0",
+    "libxmljs": "^1.0.11",
+    "link": "^1.5.1",
+    "node-addon-api": "^6.1.0",
+    "node-fetch": "^2.6.11"
+  },
+  "devDependencies": {
+    "node-gyp": "^9.4.1"
+  }
+}

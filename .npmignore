@@ -1,0 +1,6 @@
+src/vendor/
+src/build/Release/
+*.map
+*.spec.*
+SetupPackage.*
+version.txt
