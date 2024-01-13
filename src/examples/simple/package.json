@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "nodejs-waku": "^0.1.11"
+    "nodejs-waku": "^0.1.12"
   }
 }
